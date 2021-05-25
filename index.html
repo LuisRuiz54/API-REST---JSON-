@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+</head>
+<body>
+    
+<ul id="personas"></ul>
+
+<script>
+
+ /*    var persona = {
+       
+        "Nombre" : "Luis",
+        "Sobrenome" : "Ruiz",
+        "Edad": 29,
+        "Nickname" : "LuisRuiz54"
+    };
+
+    var personas = [
+       {"nombre" : "Aletza", "nickname" : "legal32"},
+       {"nombre" : "Juan", "nickname" : "olvido63"},
+       {"nombre" : "Ana", "nickname" : "espana74"},
+       {"nombre" : "Monique", "nickname" : "gato45"},
+       {"nombre" : "Oscar", "nickname" : "Primate63"}
+    ];
+    
+    var salida ='';
+
+    for(var i = 0; i < personas.length; i++) {
+       salida += `<li>${personas[i].nombre} seu nickname é ${personas[i].nickname}</li>`;
+    }
+
+    document.getElementById('personas')
+    .innerHTML = salida;
+  */
+
+ var xhttp = new XMLHttpRequest();
+ xhttp.onreadystatechange = function() {
+     if (this.readyState == 4 && this.status == 200) {
+      var respuesta = JSON.parse(xhttp.responseText);
+      var personas = respuesta.personas;
+
+      var salida ='';
+
+    for(var i = 0; i < personas.length; i++) {
+        salida += `<li>${personas[i].nombre} seu nickname é ${personas[i].nickname}</li>`;
+    }
+
+     document.getElementById('personas')
+     .innerHTML = salida;
+     }
+     
+ };
+ xhttp.open("GET", "personas.json", true);
+ xhttp.send();
+
+</script>
+
+</body>
+</html>

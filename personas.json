@@ -1,0 +1,10 @@
+{
+    "personas": [
+        {"nombre" : "Aletza", "nickname" : "legal32"},
+        {"nombre" : "Juan", "nickname" : "olvido63"},
+        {"nombre" : "Ana", "nickname" : "espana74"},
+        {"nombre" : "Monique", "nickname" : "gato45"},
+        {"nombre" : "Oscar", "nickname" : "Primate63"},
+        {"nombre" : "David", "nickname" : "Mandril852"}
+    ]
+}
